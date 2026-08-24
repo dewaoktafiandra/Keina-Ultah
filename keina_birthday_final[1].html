@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Untuk Kei 💙💜</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;600;700&family=Sacramento&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Quicksand,sans-serif;color:#554e72;background:linear-gradient(135deg,#dff5ff,#ebe2ff 50%,#fff1fa);overflow-x:hidden}
+
+/* Background floating animation */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.4;background-image:radial-gradient(circle at 20% 20%,#ffffff 0 3px,transparent 4px),radial-gradient(circle at 80% 35%,#e0c3fc 0 3px,transparent 4px),radial-gradient(circle at 40% 70%,#bde0fe 0 3px,transparent 4px);background-size:120px 120px,180px 180px,150px 150px;animation:floatBg 14s linear infinite}
+@keyframes floatBg{0%{background-position:0 0,0 0,0 0}100%{background-position:120px 120px,-180px 180px,150px -150px}}
+
+/* Floating Petals/Hearts Elements */
+.bg-heart{position:fixed;font-size:18px;pointer-events:none;z-index:1;animation:fall 6s linear infinite;opacity:0.7}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:1}100%{transform:translateY(105vh) rotate(360deg);opacity:0}}
+
+h1,h2,h3{font-family:Fredoka,sans-serif}
+.nav{position:fixed;z-index:20;top:12px;left:50%;transform:translateX(-50%);background:#ffffffc9;backdrop-filter:blur(14px);padding:9px 16px;border-radius:30px;white-space:nowrap;box-shadow:0 10px 30px #62579c20;border:1px solid #ffffff}
+.nav a{font-size:11px;font-weight:700;color:#665b91;text-decoration:none;margin:0 6px;transition:.2s}
+.nav a:hover{color:#806eb4;transform:scale(1.1)}
+section{min-height:100vh;padding:90px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+.wrap{max-width:950px;width:100%;text-align:center;z-index:2}
+.badge{display:inline-block;padding:9px 18px;border-radius:99px;background:#ffffffd9;color:#6c61a1;font-weight:700;letter-spacing:2px;box-shadow:0 4px 15px rgba(0,0,0,0.05);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+.hero h1{font-size:clamp(54px,14vw,100px);line-height:.9;color:#6659a5;text-shadow:4px 5px white;margin:25px 0 15px;animation:fadeInDown 1s ease}
+.hero h1 span{color:#5b8fd4}.hero h2{font-size:clamp(26px,7vw,44px);color:#806eb4}
+.hero p{max-width:650px;margin:18px auto 30px;line-height:1.8;font-size:17px;color:#5a5278}
+
+.btn{border:0;border-radius:99px;padding:14px 24px;color:white;background:linear-gradient(135deg,#69a9ef,#9275d0);font:700 14px Quicksand;cursor:pointer;box-shadow:0 10px 25px #7569b833;transition:.3s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px #7569b855}
+.btn.alt{background:white;color:#695ba5;border:1px solid #eee}
+
+.title{font-size:38px;color:#62579c;margin-bottom:8px}.sub{color:#817a95;margin-bottom:28px}
+.card{background:#ffffffdf;backdrop-filter:blur(14px);border:2px solid white;border-radius:30px;box-shadow:0 18px 50px #62579c20;transition:.3s}
+.card:hover{box-shadow:0 22px 60px #62579c30}
+.letter{padding:35px;text-align:left;line-height:1.9}.letter p{margin:0 0 17px}.hello{font:25px Fredoka;color:#62579c}.sig{text-align:right;font-weight:700;color:#695ba5;font-size:19px}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.memory{padding:12px;background:#ffffffc9;border-radius:22px;transition:.3s;border:1px solid #fff}.memory:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 10px 25px rgba(105,91,165,0.15)}
+.photo{aspect-ratio:1;border-radius:17px;background:linear-gradient(135deg,#cdeaff,#e6d9ff);display:flex;align-items:center;justify-content:center;font-size:44px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;border-radius:17px;display:block;transition:transform .45s ease}.memory:hover .photo img{transform:scale(1.08)}.memory p{font-size:13px;font-weight:600;margin-top:10px}
+
+.timeline{max-width:720px;margin:auto;position:relative}.timeline:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(#75b9ff,#a78bfa)}
+.t{width:50%;padding:10px 28px;text-align:left;position:relative}.t:nth-child(even){margin-left:50%}
+.tc{padding:18px;background:#ffffffc7;border:1px solid white;border-radius:20px;transition:.3s}.tc:hover{transform:scale(1.03);background:#ffffff}
+.tc h3{color:#665aa0;margin:0 0 5px}.tc p{font-size:14px;line-height:1.6;margin:0}
+
+.fav,.reason,.gamecard,.feature{padding:20px;background:#ffffffc9;border:1px solid white;border-radius:23px;transition:.3s}.fav:hover,.reason:hover,.gamecard:hover,.feature:hover{transform:translateY(-6px);background:#ffffff;box-shadow:0 10px 25px rgba(100,80,160,0.12)}
+.favgrid,.reasongrid,.games,.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fav .e{font-size:38px;display:block;transition:.3s}.fav:hover .e{transform:scale(1.2) rotate(10deg)}
+.fav b{color:#65599d}.fav p,.reason p,.gamecard p,.feature p{font-size:12px}
+.reasongrid{grid-template-columns:repeat(3,1fr)}.reason strong{font:32px Fredoka;color:#6e62a7}
+.games{grid-template-columns:repeat(4,1fr)}.gamecard h3{color:#665a9e;font-size:16px;margin:8px 0}.icon{font-size:36px;transition:.3s}.gamecard:hover .icon{transform:scale(1.2)}
+
+.game{display:none;margin-top:25px;padding:25px;background:linear-gradient(135deg,#e7f6ff,#eee5ff);border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,0.05)}.game.active{display:block;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choices button{border:0;border-radius:16px;padding:13px 5px;background:white;color:#5d557a;font:700 13px Quicksand;cursor:pointer;transition:.2s;box-shadow:0 4px 10px rgba(0,0,0,0.03)}.choices button:hover{transform:translateY(-2px);background:#f4efff;box-shadow:0 7px 18px #62579c22}
+.result{min-height:28px;margin-top:14px;color:#695ba5;font-weight:700;font-size:15px}
+
+.area{height:220px;background:#ffffff99;border-radius:20px;position:relative;overflow:hidden;border:2px dashed #d1c4e9}.heart{display:none;position:absolute;background:none;border:0;font-size:35px;cursor:pointer;transition:transform 0.1s}
+.bar{height:10px;background:#ffffff99;border-radius:99px;overflow:hidden;margin:12px 0}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#70b7ff,#a789f5);transition:.2s}
+.music{padding:30px}.note{font-size:55px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.secret{display:none;margin-top:22px;padding:25px;background:linear-gradient(135deg,#e2f4ff,#eee4ff);border-radius:22px;line-height:1.8;border:2px solid #fff}.secret.show{display:block;animation:fadeIn 0.5s ease}
+.candleBox{padding:28px}.cake{font-size:90px;filter:drop-shadow(0 10px 15px #66579c20);transition:.3s}.cake.off{filter:grayscale(.3) drop-shadow(0 10px 15px #66579c20)}
+.flame{display:inline-block;animation:flicker .7s infinite alternate}.flame.off{opacity:.15;animation:none}
+@keyframes flicker{to{transform:scale(1.18) rotate(4deg)}}
+.meter{height:16px;background:#ffffffb8;border-radius:99px;overflow:hidden;margin:16px 0;border:1px solid #fff}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#70b7ff,#a789f5);transition:.2s}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feature .big{font-size:38px}.feature b{color:#65599d}
+.unlock{margin-top:20px;min-height:25px;font-weight:700;color:#6b5ea0}
+.tap-heart{position:fixed;z-index:15;bottom:22px;right:22px;border:0;background:#ffffffdd;border-radius:50%;width:58px;height:58px;font-size:27px;box-shadow:0 10px 30px #62579c30;cursor:pointer;transition:.3s}.tap-heart:hover{transform:scale(1.15) rotate(15deg)}
+.toast{position:fixed;z-index:30;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;background:#ffffffed;padding:12px 22px;border-radius:99px;box-shadow:0 10px 35px #62579c30;transition:.3s;font-weight:700;color:#62579c;border:1px solid #fff}.toast.show{opacity:1;transform:translate(-50%,0)}
+footer{text-align:center;padding:35px;color:#817993;font-size:13px;line-height:1.6}
+
+@media(max-width:850px){.games{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.favgrid,.feature-grid{grid-template-columns:repeat(2,1fr)}.reasongrid,.games{grid-template-columns:1fr}.timeline:before{left:10px}.t,.t:nth-child(even){width:100%;margin-left:0;padding-left:32px}.letter{padding:24px 19px}.nav{max-width:94vw;overflow:auto}.choices{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Floating Background Romance Elements -->
+<div id="bgPetals"></div>
+
+<div class="nav">
+<a href="#home">BERANDA</a>
+<a href="#letter">SURAT</a>
+<a href="#story">KISAH KITA</a>
+<a href="#memories">GALERI</a>
+<a href="#games">MINI GAMES (20)</a>
+<a href="#candle">TIUP LILIN</a>
+<a href="#end">💌 RA HASIA</a>
+</div>
+
+<section id="home">
+<div class="wrap hero">
+<div class="badge">25 • AGUSTUS • 2026 ✨</div>
+<h1>Happy<br><span>Birthday</span></h1>
+<h2>Kei, Spesial Kesayanganku 💙💜</h2>
+<p>Aku merancang sudut kecil di dunia maya ini khusus untuk merayakan hari spesialmu. Setiap kata, warna, dan permainan di sini dibuat dengan rasa sayang. Selamat menjelajah ya, Ayang! 😌✨</p>
+<button class="btn" onclick="startJourney()">Mulai Petualangan Cinta Ini 💌</button>
+</div>
+</section>
+
+<section id="letter">
+<div class="wrap">
+<h2 class="title">💌 Surat Spesial Untukmu</h2>
+<p class="sub">Dibaca pelan-pelan ya, diresapi setiap kata-katanya... 💙</p>
+<div class="card letter">
+<p class="hello">Hai Kei Kesayanganku, 💙💜</p>
+<p>Selamat ulang tahun yang luar biasa ya! Hari ini usiamu bertambah, dan aku adalah orang yang paling bahagia karena bisa menyaksikan senyummu di hari yang begitu istimewa ini. Semoga di usiamu yang baru ini, setiap langkahmu dipenuhi keberkahan, kebahagiaan yang melimpah, dan rasa tenang yang selalu hadir di dada.</p>
+<p>Jujur, kalau harus diungkapkan secara langsung lewat kata-kata, kadang aku suka bingung dan malu-malu mau mulai dari mana. Makanya, aku wujudkan perasaan itu lewat halaman interaktif ini. Tempat kecil khusus buat kamu. 😭💙</p>
+<p>Terima kasih ya sudah hadir di kehidupanku. Terima kasih untuk setiap obrolan manis (dan kadang absurd kita), gelak tawa saat mabar Mobile Legends, kehebohan di Roblox, hingga momen-momen tenang yang membuat hariku jauh lebih berwarna. Kamu adalah alasan di balik banyak senyumanku belakangan ini.</p>
+<p>Aku hafal betul hal-hal kecil tentangmu — favoritmu pada warna biru dan ungu, rasa sukamu pada Cinnamoroll yang fluffy, sampai nikmatnya matcha yang selalu bisa bikin suasana hatimu membaik. Segala hal tentangmu selalu menarik dan spesial buatku.</p>
+<p>Di hari ulang tahunmu ini, aku ingin kamu ingat: kamu tidak perlu selalu menjadi orang yang kuat sendirian. Jika kamu lelah, aku ada untuk mendengarkan. Jika kamu sedih, bahuku siap jadi tempat bersandar. Dan saat kamu bahagia, aku akan jadi orang pertama yang merayakannya bersamamu.</p>
+<p>Semoga semua impian dan cita-citamu perlahan mewujud nyata. Semoga kita terus bisa merajut kenangan indah ini bersama-sama hingga nanti kita bisa menoleh ke belakang dan berkata, "Wah, ternyata kita sudah melangkah sejauh ini ya."</p>
+<p>Selamat ulang tahun, Ayang. Makan makanan favoritmu hari ini, nikmati harimu, dan ingatlah selalu bahwa ada seseorang di sini yang begitu mengagumi dan menyayangimu. 🤍✨</p>
+<p class="sig">Dengan segenap rasa sayang,<br>— Orang yang paling mengagumimu 💙💜</p>
+</div>
+</div>
+</section>
+
+<section id="story">
+<div class="wrap">
+<h2 class="title">✨ Alur Perjalanan Cinta Kita</h2>
+<p class="sub">Setiap momen bersamamu adalah bab favorit dalam hidupku.</p>
+<div class="timeline">
+<div class="t"><div class="tc"><h3>01 • Momen Awal Bertemu 👀</h3><p>Berawal dari sapaan sederhana tanpa prasangka, siapa yang sangka takdir membawa kita mengukir cerita seindah ini?</p></div></div>
+<div class="t"><div class="tc"><h3>02 • Benih Percakapan 💬</h3><p>Dari percakapan singkat hingga obrolan larut malam. Suaramu dan ceritamu perlahan menjadi hal yang paling aku nantikan setiap hari.</p></div></div>
+<div class="t"><div class="tc"><h3>03 • Era Mabar & Canda Tawa 🎮</h3><p>Keseruan di Mobile Legends dan kekonyolan di Roblox! Menang atau kalah tak masalah, karena yang utama adalah menghabiskan waktu bersamamu.</p></div></div>
+<div class="t"><div class="tc"><h3>04 • Mengenal Hatimu 💜</h3><p>Mulai menghafal warna kesukaanmu (Biru & Ungu), karakter kesayanganmu Cinnamoroll, hingga kegemaranmu pada matcha. Kamu makin bermakna di hatiku.</p></div></div>
+<div class="t"><div class="tc"><h3>05 • Hari Ini & Selamanya 🫶</h3><p>Merayakan ulang tahunmu hari ini dan bersiap mengukir ribuan kenangan manis baru di hari-hari mendatang.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="memories">
+<div class="wrap">
+<h2 class="title">📸 Galeri Kenangan Indah Kita</h2>
+<p class="sub">Setiap sudut momen yang mengabadikan senyum dan kebersamaan kita ✨</p>
+<div class="grid">
+<div class="memory"><div class="photo"><img src="Foto1.jpg" alt="Foto Kei 1" loading="lazy"></div><p>Senyuman favoritku yang selalu menghangatkan hari 💙</p></div>
+<div class="memory"><div class="photo"><img src="Foto2.jpg" alt="Foto Kei 2" loading="lazy"></div><p>Binar matamu saat sedang bahagia ✨</p></div>
+<div class="memory"><div class="photo"><img src="Foto3.jpg" alt="Memory mabar 1" loading="lazy"></div><p>Momen epic & kocak saat kita mabar ML 🎮</p></div>
+<div class="memory"><div class="photo"><img src="Foto4.jpg" alt="Memory mabar 2" loading="lazy"></div><p>Keseruan tanpa batas di dunia Roblox ☁️</p></div>
+<div class="memory"><div class="photo"><img src="Foto5.jpg" alt="Memory 5" loading="lazy"></div><p>Momen berkesan yang selalu kuingat 💜</p></div>
+<div class="memory"><div class="photo"><img src="Foto6.jpg" alt="Memory 6" loading="lazy"></div><p>Momen² muncak dengan kamu 🤍</p></div>
+<div class="memory"><div class="photo"><img src="Foto7.jpg" alt="Memory 7" loading="lazy"></div><p>Potret kebersamaan yang teramat manis ✨</p></div>
+<div class="memory"><div class="photo"><img src="Foto8.jpg" alt="Memory 8" loading="lazy"></div><p>Semoga makin cakep kedepannya 💙</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="title">☁️ Dunia Kecil Kesukaan Kei</h2>
+<p class="sub">Hal-hal yang selalu mengingatkanku pada sosokmu yang menggemaskan.</p>
+<div class="favgrid">
+<div class="fav"><span class="e">💙</span><b>Ocean Blue</b><p>Warna ketenangan kesukaanmu</p></div>
+<div class="fav"><span class="e">💜</span><b>Sweet Purple</b><p>Warna manis seperti dirimu</p></div>
+<div class="fav"><span class="e">☁️</span><b>Cinnamoroll</b><p>Karakter menggemaskan favoritmu</p></div>
+<div class="fav"><span class="e">🍵</span><b>Matcha Delight</b><p>Minuman penyegar suasana hatimu</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="title">💜 Mengapa Kamu Sangat Berarti?</h2>
+<p class="sub">Tiga dari jutaan alasan mengapa aku begitu mengagumimu.</p>
+<div class="reasongrid">
+<div class="reason"><strong>01</strong><p>Kehadiranmu memiliki sihir ajaib yang selalu mampu membuat hari biasa terasa begitu istimewa dan berwarna.</p></div>
+<div class="reason"><strong>02</strong><p>Kebaikan hatimu, ketulusanmu, serta caramu tersenyum telah menetap indah di dalam ingatan dan hatiku.</p></div>
+<div class="reason"><strong>03</strong><p>Sebanyak apa pun kata yang kutulis di sini, tidak akan pernah cukup menggambarkan betapa cantiknya dirimu di mataku.</p></div>
+</div>
+</div>
+</section>
+
+<!-- SECTION GAMES (20 GAMES INTERAKTIF) -->
+<section id="games">
+<div class="wrap">
+<h2 class="title">🎮 Arena Mini Games Spesial Kei (20 Games)</h2>
+<p class="sub">Koleksi 20 permainan interaktif romantis khusus buat nemenin hari bahagiamu! Selesaikan semuanya ya! 💖</p>
+
+<div class="games">
+<!-- Game 1 - 10 -->
+<div class="gamecard"><div class="icon">💙</div><h3>1. Kei Quiz</h3><p>Uji seberapa tahu kamu soal hal favoritmu!</p><button class="btn" onclick="openGame('quiz')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">💌</div><h3>2. Catch My Hearts</h3><p>Tangkap 7 cinta dari aku sebelum waktu habis!</p><button class="btn" onclick="openGame('heart')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">✂️</div><h3>3. Suit Romantis</h3><p>Batu, Gunting, Kertas vs Aku! Siapa yang menang?</p><button class="btn" onclick="openGame('rps')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🎁</div><h3>4. Kotak Hadiah</h3><p>Pilih salah satu kado rahasia romantis!</p><button class="btn" onclick="openGame('gift')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🧠</div><h3>5. Memory Match</h3><p>Cocokkan pasangan ikon romantis!</p><button class="btn" onclick="openGame('memoryGame');newMemory()">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🎯</div><h3>6. Love Meter</h3><p>Spam klik untuk mengisi energi cinta!</p><button class="btn" onclick="openGame('meterGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🔐</div><h3>7. Kode Rahasia</h3><p>Tebak kode 3 digit angka keberuntungan!</p><button class="btn" onclick="openGame('codeGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🌸</div><h3>8. Tangkap Bintang</h3><p>Kumpulkan bintang harapan sebanyak mungkin!</p><button class="btn" onclick="openGame('starGame');startStars()">Mainkan</button></div>
+<div class="gamecard"><div class="icon">💞</div><h3>9. This or That</h3><p>Pilih aktivitas romantis favoritmu!</p><button class="btn" onclick="openGame('thisGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🎀</div><h3>10. Ramalan Cinta</h3><p>Buka pesan takdir manis untuk hari ini!</p><button class="btn" onclick="openGame('fortuneGame')">Mainkan</button></div>
+
+<!-- Game 11 - 20 (NEW!) -->
+<div class="gamecard"><div class="icon">🧩</div><h3>11. Puzzle Kata Cinta</h3><p>Susun kata romantis yang teracak!</p><button class="btn" onclick="openGame('scrambleGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🔮</div><h3>12. Magic 8-Ball</h3><p>Tanyakan apa saja pada bola ajaib!</p><button class="btn" onclick="openGame('ballGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🍪</div><h3>13. Fortune Cookie</h3><p>Pecahkan kue keberuntunganmu!</p><button class="btn" onclick="openGame('cookieGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🎲</div><h3>14. Dadu Kencan</h3><p>Kocok dadu untuk ide kencan seru!</p><button class="btn" onclick="openGame('diceGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🎵</div><h3>15. Tebak Nada Hati</h3><p>Pilih lagu yang mewakili perasaan kita!</p><button class="btn" onclick="openGame('songQuizGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🧸</div><h3>16. Peluk Virtual</h3><p>Kirimkan pelukan hangat dalam durasi detik!</p><button class="btn" onclick="openGame('hugGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">☁️</div><h3>17. Cinnamoroll Catch</h3><p>Bantu Cinnamoroll menangkap awan!</p><button class="btn" onclick="openGame('cloudGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">🍵</div><h3>18. Racik Matcha</h3><p>Campurkan bahan untuk buat Matcha sempurna!</p><button class="btn" onclick="openGame('matchaGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">💌</div><h3>19. Kapsul Waktu</h3><p>Buka pesan masa depan dari aku!</p><button class="btn" onclick="openGame('capsuleGame')">Mainkan</button></div>
+<div class="gamecard"><div class="icon">👑</div><h3>20. Uji Kebersamaan</h3><p>Sebesar apa kadar keserasian kita hari ini?</p><button class="btn" onclick="openGame('affinityGame')">Mainkan</button></div>
+</div>
+
+<!-- CONTAINER CONTAINER GAME INTERAKTIF (DISPLAYED DYNAMICALLY) -->
+<div id="quiz" class="game card"><h3>💙 Kei Quiz</h3><p>Apa kombinasi kebahagiaan paling sempurna untuk Kei?</p><div class="choices"><button onclick="quiz(0)">Matcha Hangat 🍵</button><button onclick="quiz(1)">Cinnamoroll Lucu ☁️</button><button onclick="quiz(2)">Dua-duanya + Ditemenin Aku 😭💜</button></div><div id="qr" class="result"></div></div>
+<div id="heart" class="game card"><h3>💌 Catch My Hearts</h3><p>Tangkap 7 hati dalam waktu 15 detik!</p><div class="bar"><span id="hb"></span></div><div class="area" id="area"><button class="heart" id="ht" onclick="catchH()">💙</button></div><div id="hr" class="result">Klik tombol mulai!</div><button class="btn" onclick="startH()">Mulai Permainan</button></div>
+<div id="rps" class="game card"><h3>✂️ Suit Romantis</h3><p>Pilih pilihanmu! Kalau menang dapat bonus sayang!</p><div class="choices"><button onclick="rps('batu')">🪨 Batu</button><button onclick="rps('gunting')">✂️ Gunting</button><button onclick="rps('kertas')">📄 Kertas</button></div><div id="rr" class="result"></div></div>
+<div id="gift" class="game card"><h3>🎁 Kotak Hadiah Rahasia</h3><p>Pilih satu kotak kado manis di bawah ini!</p><div class="choices"><button onclick="gift(1)">🎁 Kado #1</button><button onclick="gift(2)">🎁 Kado #2</button><button onclick="gift(3)">🎁 Kado #3</button></div><div id="gr" class="result"></div></div>
+<div id="memoryGame" class="game card"><h3>🧠 Memory Match</h3><p>Temukan semua pasangan ikon yang cocok!</p><div id="memGrid" class="choices"></div><div id="memResult" class="result"></div></div>
+<div id="meterGame" class="game card"><h3>🎯 Love Meter</h3><p>Tekan tombol secepatnya sampai meteran mencapai 100%!</p><div class="meter"><i id="loveBar"></i></div><button class="btn" onclick="loveTap()">Tambah Sayang 💜</button><div id="loveResult" class="result">0%</div></div>
+<div id="codeGame" class="game card"><h3>🔐 Kode Rahasia Cinta</h3><p>Tebak angka 3-digit dari 100 - 999!</p><input id="codeInput" type="number" min="100" max="999" style="padding:12px;border:1px solid #ccc;border-radius:15px;text-align:center;font:700 15px Quicksand;margin-right:8px"><button class="btn" onclick="guessCode()">Cek Kode</button><div id="codeResult" class="result"></div></div>
+<div id="starGame" class="game card"><h3>🌸 Tangkap Bintang</h3><p>Kumpulkan ⭐ terbanyak dalam 10 detik!</p><div class="area" id="starArea"><button class="heart" id="starBtn" onclick="tapStar()">⭐</button></div><div id="starResult" class="result">Tekan mulai.</div><button class="btn" onclick="startStars()">Mulai</button></div>
+<div id="thisGame" class="game card"><h3>💞 This or That</h3><p>Pilih rencana paling seru untuk kencan selanjutnya!</p><div class="choices"><button onclick="thisPick('Nonton Film Bareng 🎬')">Nonton Film 🎬</button><button onclick="thisPick('Mabar Game Sampai Pagi 🎮')">Mabar Game 🎮</button><button onclick="thisPick('Deep Talk & Kulineran 💬')">Deep Talk 💬</button></div><div id="thisResult" class="result"></div></div>
+<div id="fortuneGame" class="game card"><h3>🎀 Ramalan Cinta</h3><p>Klik tombol untuk membuka pesan takdir hari ini!</p><button class="btn" onclick="fortune()">Buka Pesan</button><div id="fortuneResult" class="result"></div></div>
+
+<!-- GAMES 11-20 INTERACTIVE ELEMENTS -->
+<div id="scrambleGame" class="game card"><h3>🧩 Puzzle Kata Cinta</h3><p>Susun kata acak ini: <b>"Y-N-A-G-A-S"</b></p><input id="scrambleInput" type="text" placeholder="Ketik kata yang benar..." style="padding:12px;border:1px solid #ccc;border-radius:15px;text-align:center;font:700 15px Quicksand"><button class="btn" onclick="checkScramble()">Tebak</button><div id="scrambleResult" class="result"></div></div>
+<div id="ballGame" class="game card"><h3>🔮 Magic 8-Ball</h3><p>Apakah kita akan selalu bahagia bersama?</p><button class="btn" onclick="magicBall()">Tanyakan Bola Ajaib</button><div id="ballResult" class="result"></div></div>
+<div id="cookieGame" class="game card"><h3>🍪 Fortune Cookie</h3><p>Pecahkan kue untuk membaca ramalan manis!</p><button class="btn" onclick="breakCookie()">🥠 Pecahkan Kue</button><div id="cookieResult" class="result"></div></div>
+<div id="diceGame" class="game card"><h3>🎲 Dadu Kencan</h3><p>Kocok dadu untuk menentukan aktivitas seru selanjutnya!</p><button class="btn" onclick="rollDice()">🎲 Kocok Dadu</button><div id="diceResult" class="result"></div></div>
+<div id="songQuizGame" class="game card"><h3>🎵 Tebak Nada Hati</h3><p>Lagu apa yang paling cocok menggambarkan kamu di mataku?</p><div class="choices"><button onclick="songPick(1)">Beautiful in White 🤍</button><button onclick="songPick(2)">Perfect - Ed Sheeran 🎶</button><button onclick="songPick(3)">Semua lagu tentang keindahan 🌸</button></div><div id="songResult" class="result"></div></div>
+<div id="hugGame" class="game card"><h3>🧸 Peluk Virtual</h3><p>Tahan tombol di bawah ini untuk mengirimkan pelukan hangat!</p><button class="btn" onmousedown="startHug()" onmouseup="endHug()" ontouchstart="startHug()" ontouchend="endHug()">🤗 Tahan Untuk Memeluk</button><div id="hugResult" class="result">Durasi Pelukan: 0 detik</div></div>
+<div id="cloudGame" class="game card"><h3>☁️ Cinnamoroll Catch</h3><p>Bantu Cinnamoroll mengumpulkan 5 awan empuk!</p><button class="btn" onclick="catchCloud()">☁️ Tangkap Awan (<span id="cloudCount">0</span>/5)</button><div id="cloudResult" class="result"></div></div>
+<div id="matchaGame" class="game card"><h3>🍵 Racik Matcha Spesial</h3><p>Klik bahan untuk membuat racikan Matcha paling nikmat!</p><div class="choices"><button onclick="addMatcha('Bubuk Matcha Terbaik 🍵')">+ Matcha</button><button onclick="addMatcha('Susu Manis 🥛')">+ Susu</button><button onclick="addMatcha('Sentuhan Cinta 💖')">+ Cinta</button></div><div id="matchaResult" class="result">Racikan: Belum ada</div></div>
+<div id="capsuleGame" class="game card"><h3>💌 Kapsul Waktu</h3><p>Pesan rahasia ini dikunci khusus untuk masa depan kita.</p><button class="btn" onclick="openCapsule()">🔓 Buka Kapsul Waktu</button><div id="capsuleResult" class="result"></div></div>
+<div id="affinityGame" class="game card"><h3>👑 Uji Kebersamaan Cinta</h3><p>Hitung persentase kecocokan energi kita hari ini!</p><button class="btn" onclick="calcAffinity()">⚡ Hitung Ketersambungan</button><div id="affinityResult" class="result"></div></div>
+</div>
+</section>
+
+<section id="candle">
+<div class="wrap">
+<h2 class="title">🎂 Momen Tiup Lilin & Harapan</h2>
+<p class="sub">Pikirkan satu keinginan manis di dalam hatimu sebelum meniupnya ✨</p>
+<div class="card candleBox">
+<div class="cake">🎂 <span id="flame" class="flame">🕯️</span></div>
+<p id="candleText">Pejamkan mata sejenak, buat satu harapan indah... 💫</p>
+<button class="btn" onclick="blowCandle()">💨 Tiup Lilin</button>
+<button class="btn alt" onclick="wish()">✨ Harapan Sudah Terucap</button>
+<div id="wishResult" class="unlock"></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="title">✨ Kejutan & Fitur Spesial Web</h2>
+<p class="sub">Dibuat penuh detail agar harimu makin berwarna!</p>
+<div class="feature-grid">
+<div class="feature"><div class="big">💗</div><b>Tombol Hati Melayang</b><p>Tekan tombol hati di kanan bawah untuk kejutan pesan manis spontan.</p></div>
+<div class="feature"><div class="big">🎊</div><b>Pesta Confetti</b><p>Efek perayaan bertaburan setiap kali kamu memenangkan mini games!</p></div>
+<div class="feature"><div class="big">🌸</div><b>Animasi Kelopak Gugur</b><p>Efek kelopak & hati yang melayang lembut mengiringi penjelajahanmu.</p></div>
+<div class="feature"><div class="big">🎮</div><b>20 Mini Games</b><p>Berbagai variasi permainan romantis untuk menemani waktu luangmu.</p></div>
+<div class="feature"><div class="big">🎂</div><b>Ritual Tiup Lilin</b><p>Pengalaman interaktif merayakan ulang tahun secara virtual.</p></div>
+<div class="feature"><div class="big">💌</div><b>Surat Rahasia Akhir</b><p>Pesan pamungkas yang paling emosional di penghujung halaman.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="title">🎧 Musik Pengiring Langkah Kita</h2>
+<p class="sub">Alunan nada manis untuk menemani momen spesial ini 💙</p>
+<div class="card music">
+<div class="note">🎵</div>
+<h3 style="margin:5px 0;color:#665a9e">Melodi Indah Untuk Kei</h3>
+<p id="musicStatus">Putar musiknya agar suasananya semakin terasa... 🎶</p>
+<audio id="ourSong" src="Lagu.mp3" preload="metadata"></audio>
+<div class="bar"><span id="musicProgress"></span></div>
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+<button class="btn" onclick="toggleSong()" id="musicBtn">▶ Putar Musik</button>
+<button class="btn alt" onclick="restartSong()">↻ Ulang Lagu</button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="end">
+<div class="wrap">
+<div class="card" style="padding:40px 25px">
+<h2 class="title">🎁 Kejutan Terakhir Untuk Ayang</h2>
+<p class="sub">Satu tombol terakhir sebelum kita mengakhiri perjalanan indah ini.</p>
+<button class="btn" onclick="finish()">Buka Pesan Terakhir 💌</button>
+<div id="secret" class="secret">
+<h3>Untuk Kei, Selamanya 💙💜</h3>
+<p>Kalau kamu sudah membaca sampai titik ini, terima kasih banyak ya sudah menghargai karya kecil ini. 😭💙</p>
+<p>Sekali lagi, Selamat Ulang Tahun Ayang! Semoga diusiamu saat ini, langkahmu semakin dipermudah, diberikan kesehatan yang berlimpah, dan kebahagiaan yang tidak pernah putus.</p>
+<p>Terima kasih sudah lahir ke dunia. Terima kasih telah menjadi sosok yang begitu luar biasa dan menghiasi hariku dengan indah. Semoga cerita dan perjalanan kita bisa terus berlanjut hingga rentang waktu yang sangat panjang.</p>
+<b>Selamat ulang tahun, Kei kesayanganku. Aku sangat menyayangimu! 💙💜</b><br><br>
+— Dari Aku yang Selalu Mendoakan Kebahagiaanmu ✨
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+Dibuat penuh cinta dengan 💙💜, matcha 🍵, dan jutaan kasih sayang.<br>
+Khusus untuk Kei tercinta, dari aku.
+</footer>
+
+<button class="tap-heart" onclick="randomHeart()">💗</button>
+<div id="toast" class="toast"></div>
+
+<script>
+/* FLOATING PETALS ANIMATION */
+function createPetals() {
+    const container = document.getElementById('bgPetals');
+    const items = ['🌸', '💙', '💜', '✨', '☁️'];
+    for(let i=0; i<15; i++) {
+        let span = document.createElement('span');
+        span.className = 'bg-heart';
+        span.textContent = items[Math.floor(Math.random() * items.length)];
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.animationDuration = (5 + Math.random() * 5) + 's';
+        span.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(span);
+    }
+}
+createPetals();
+
+/* NAVIGATION & CORE */
+function startJourney(){showToast('Petualangan cinta dimulai! 💙');document.querySelector('#letter').scrollIntoView({behavior:'smooth'})}
+function openGame(id){document.querySelectorAll('.game').forEach(x=>x.classList.remove('active'));let x=document.getElementById(id);x.classList.add('active');x.scrollIntoView({behavior:'smooth',block:'center'})}
+
+/* 20 GAMES LOGIC */
+function quiz(n){document.getElementById('qr').textContent=n===2?'Pilihan sempurna! 😭💙 Dua-duanya memang paling pas kalau dinikmati bareng aku.':'Pilihan manis! Tapi yang penting dinikmati bersama ya 😭💜';confetti()}
+function rps(m){let a=['batu','kertas','gunting'][Math.floor(Math.random()*3)],o=m===a?'Hasil Seri! Keduanya sama-sama hebat 😭':((m==='batu'&&a==='gunting')||(m==='kertas'&&a==='batu')||(m==='gunting'&&a==='kertas'))?'Ayang Menang! Hadiahnya peluk hangat! 😭💙':'Aku Menang! Tapi aku tetap sayang kamu 😎💜';document.getElementById('rr').textContent='Aku pilih '+a+'. '+o;if(o.includes('Ayang Menang'))confetti()}
+function gift(n){document.getElementById('gr').textContent=['Isinya: Pelukan hangat virtual tak terbatas! 🤍','Isinya: Segelas Matcha spesial + Bonus Sayang 🍵💚','Isinya: Boneka Cinnamoroll raksasa yang siap nemenin kamu! ☁️'][n-1];confetti()}
+
+let c=0,t=0,iv;
+function startH(){c=0;t=15;document.getElementById('hr').textContent='GO! Tangkap semua cinta!';document.getElementById('hb').style.width='0%';move();clearInterval(iv);iv=setInterval(()=>{t--;if(t<=0){clearInterval(iv);ht.style.display='none';document.getElementById('hr').textContent='Waktu habis! Kamu berhasil menangkap '+c+'/7 hati 💙'}},1000)}
+function move(){if(t<=0)return;let x=document.getElementById('ht');x.style.left=(Math.random()*82+5)+'%';x.style.top=(Math.random()*72+8)+'%';x.style.display='block'}
+function catchH(){c++;document.getElementById('hb').style.width=Math.min(c/7*100,100)+'%';if(c>=7){clearInterval(iv);ht.style.display='none';document.getElementById('hr').textContent='YAY! Semua cinta berhasil ditangkap! 💙💜';confetti()}else move()}
+
+let cards=[],first=null,lock=false;
+function newMemory(){let a=['💙','💜','🍵','☁️','🎮','✨'];cards=[...a,...a].sort(()=>Math.random()-.5);first=null;lock=false;let g=document.getElementById('memGrid');g.innerHTML='';cards.forEach((v,i)=>{let b=document.createElement('button');b.textContent='❓';b.dataset.v=v;b.onclick=()=>flipCard(b);g.appendChild(b)})}
+function flipCard(b){if(lock||b.textContent!=='❓')return;b.textContent=b.dataset.v;if(!first){first=b;return}if(first.dataset.v===b.dataset.v){first.disabled=true;b.disabled=true;first=null;if([...document.querySelectorAll('#memGrid button')].every(x=>x.textContent!=='❓')){document.getElementById('memResult').textContent='Hebat! Semua daya ingatmu luar biasa! 🧠💜';confetti()}}else{let old=first;lock=true;setTimeout(()=>{old.textContent='❓';b.textContent='❓';first=null;lock=false},650)}}
+
+let love=0;
+function loveTap(){love=Math.min(100,love+10);document.getElementById('loveBar').style.width=love+'%';document.getElementById('loveResult').textContent=love+'%';if(love===100){document.getElementById('loveResult').textContent='Energi Cinta Penuh! Kasih sayangku meluap untukmu 😭💙💜';confetti()}}
+
+let secretCode=Math.floor(100+Math.random()*900);
+function guessCode(){let v=Number(document.getElementById('codeInput').value),r=document.getElementById('codeResult');if(!v){r.textContent='Masukkan angkamu dulu 😭';return}if(v===secretCode){r.textContent='TERBUKA! Kode Rahasia Cinta Berhasil Dipetakan! 🔓💜';confetti()}else r.textContent=v<secretCode?'Kodenya lebih besar lagi 👀':'Kodenya sedikit lebih kecil 👀'}
+
+let starCount=0,starTime,starTimer;
+function startStars(){starCount=0;document.getElementById('starResult').textContent='GO!';placeStar();clearInterval(starTimer);starTime=10;starTimer=setInterval(()=>{starTime--;if(starTime<=0){clearInterval(starTimer);starBtn.style.display='none';document.getElementById('starResult').textContent='Luar Biasa! Kamu mengumpulkan '+starCount+' Bintang Harapan ⭐'}},1000)}
+function placeStar(){if(starTime<=0)return;let b=document.getElementById('starBtn');b.style.left=(Math.random()*82+5)+'%';b.style.top=(Math.random()*72+8)+'%';b.style.display='block'}
+function tapStar(){starCount++;placeStar()}
+
+function thisPick(v){document.getElementById('thisResult').textContent='Pilihan kencan terdaftar: '+v+' 💞';confetti()}
+function fortune(){let a=['Hari ini senyummu akan membawa banyak keberuntungan! ✨','Seseorang di dekatmu sedang merindukanmu dengan sangat... 💙','Kamu akan mendapatkan kabar manis dalam waktu dekat! 🌸','Misi hari ini: Istirahat yang cukup dan makan makanan enak! 🍵','Bonus: Kadar sayanggku kepadamu bertambah 1000%! 💜'];document.getElementById('fortuneResult').textContent=a[Math.floor(Math.random()*a.length)];confetti()}
+
+/* NEW GAMES LOGIC (11-20) */
+function checkScramble(){let val=document.getElementById('scrambleInput').value.trim().toUpperCase();if(val==='SAYANG'){document.getElementById('scrambleResult').textContent='TEPAT! Jawabanmu benar: SAYANG 💖';confetti()}else{document.getElementById('scrambleResult').textContent='Hampir benar! Coba susun lagi yuk 😭'}}
+function magicBall(){let ans=['Pasti dong! ✨','Sudah takdirnya begitu! 💙','Tentu saja, tanpa ragu! 💜','100% Ya! 🥰'];document.getElementById('ballResult').textContent='Jawaban Ajaib: '+ans[Math.floor(Math.random()*ans.length)];confetti()}
+function breakCookie(){document.getElementById('cookieResult').textContent='Isi Kue: "Kebahagiaan terbesar akan selalu menyertai setiap langkahmu!" 🥠✨';confetti()}
+function rollDice(){let acts=['Kencan Nonton Film 🎬','Makan Malam Romantis 🕯️','Mabar ML Sampai Mythic 🎮','Jalan-jalan Santai Sore 🌅','Foto-foto Lucu Bareng 📸'];document.getElementById('diceResult').textContent='Hasil Kocokan Dadu: '+acts[Math.floor(Math.random()*acts.length)];confetti()}
+function songPick(n){document.getElementById('songResult').textContent='Pilihan lagu manis! Setiap nadanya mewakili rasa sayangku 🎵💙';confetti()}
+
+let hugTimer, hugSec=0;
+function startHug(){hugSec=0;hugTimer=setInterval(()=>{hugSec++;document.getElementById('hugResult').textContent='Memeluk... '+hugSec+' detik 🤗'},1000)}
+function endHug(){clearInterval(hugTimer);if(hugSec>0){document.getElementById('hugResult').textContent='Pelukan hangat terkirim selama '+hugSec+' detik! Terima kasih Ayang 💖';confetti()}}
+
+let clouds=0;
+function catchCloud(){clouds++;document.getElementById('cloudCount').textContent=clouds;if(clouds>=5){document.getElementById('cloudResult').textContent='Cinnamoroll Bahagia! Semua awan sudah terkumpul ☁️💙';confetti();clouds=0}}
+
+let matchaMix=[];
+function addMatcha(item){matchaMix.push(item);document.getElementById('matchaResult').textContent='Racikan: '+matchaMix.join(' + ');if(matchaMix.length>=3){document.getElementById('matchaResult').textContent='Matcha Spesial Sempurna Siap Dinikmati! 🍵✨';confetti();matchaMix=[]}}
+
+function openCapsule(){document.getElementById('capsuleResult').textContent='Pesan Kapsul: "Di masa depan nanti, aku akan tetap menjadi orang yang paling menyayangimu." 💌✨';confetti()}
+function calcAffinity(){document.getElementById('affinityResult').textContent='Persentase Keserasian Kita: 1000% Sempurna! 💞👑';confetti()}
+
+/* CANDLE & MUSIC LOGIC */
+function blowCandle(){document.getElementById('flame').classList.add('off');document.querySelector('.cake').classList.add('off');document.getElementById('candleText').textContent='LILIN TERTIUP! 🎉 Harapan indahmatu sedang menuju kenyataan! 💙';confetti()}
+function wish(){document.getElementById('wishResult').textContent='Harapanmu telah terkunci indah di bintang-bintang. Semoga terwujud! ✨💜';confetti()}
+
+function toggleSong(){
+  const song=document.getElementById('ourSong'),btn=document.getElementById('musicBtn'),status=document.getElementById('musicStatus');
+  if(song.paused){
+    song.play().then(()=>{btn.textContent='⏸ Pause Musik';status.textContent='🎵 Mengalun indah... 💙'}).catch(()=>{status.textContent='Klik sekali lagi untuk memutar musik!'});
+  }else{
+    song.pause();btn.textContent='▶ Putar Musik';status.textContent='⏸️ Musik dihentikan sejenak 💜';
+  }
+}
+function restartSong(){
+  const song=document.getElementById('ourSong');
+  song.currentTime=0;
+  if(song.paused) toggleSong();
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const song=document.getElementById('ourSong');
+  if(song){
+    song.addEventListener('timeupdate',()=>{
+      const p=song.duration?(song.currentTime/song.duration)*100:0;
+      document.getElementById('musicProgress').style.width=p+'%';
+    });
+    song.addEventListener('ended',()=>{
+      document.getElementById('musicBtn').textContent='▶ Putar Musik';
+      document.getElementById('musicStatus').textContent='🎵 Musik selesai. Putar ulang jika mau! 💙';
+      document.getElementById('musicProgress').style.width='0%';
+    });
+  }
+});
+
+function finish(){document.getElementById('secret').classList.add('show');confetti();showToast('Selamat Ulang Tahun, Kei! 💙💜')}
+function randomHeart(){let a=['Kamu alasan senyumku hari ini! 😭💙','Jangan lupa bahagia dan tersenyum ya! 💜','Satu cinta manis khusus buat kamu. 💗','Terima kasih sudah menjelajah web ini! ✨','Bonus rasa sayang +9999! 💖'];showToast(a[Math.floor(Math.random()*a.length)])}
+function showToast(s){let x=document.getElementById('toast');x.textContent=s;x.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>x.classList.remove('show'),2400)}
+
+function confetti(){
+  for(let i=0;i<25;i++){
+    let s=document.createElement('span');
+    s.textContent=['💙','💜','✨','💗','🎉','🌸','☁️'][Math.floor(Math.random()*7)];
+    s.style.position='fixed';
+    s.style.zIndex=40;
+    s.style.left=Math.random()*100+'vw';
+    s.style.top='-30px';
+    s.style.fontSize=(18+Math.random()*20)+'px';
+    s.style.transition='transform 1.8s ease-out, opacity 1.8s';
+    document.body.appendChild(s);
+    requestAnimationFrame(()=>{
+      s.style.transform='translateY('+(75+Math.random()*85)+'vh) rotate('+(Math.random()*720-360)+'deg)';
+      s.style.opacity='0';
+    });
+    setTimeout(()=>s.remove(),1800);
+  }
+}
+</script>
+</body>
+</html>
